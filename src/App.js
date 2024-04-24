@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
-
+import {ReactQueryDevtools} from 'react-query/devtools'
 import HomePage from "./components/HomePage";
 import { Link } from "react-router-dom";
 import { SuperHeroesPage } from "./components/SuperHeroesPage";
@@ -36,6 +36,7 @@ function App() {
         </Routes>
       </div>
     </Router>
+    <ReactQueryDevtools initialIsOpen = {false} position='bottom-right'/>
     </QueryClientProvider>
   );
 }
